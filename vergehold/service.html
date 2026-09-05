@@ -15,6 +15,7 @@
 <link href="style.css" rel="stylesheet">
 </head>
 <body>
+<a href="#main-content" class="vh-skip-link">Skip to content</a>
 
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
   <div class="container">
@@ -27,7 +28,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navMenu">
       <ul class="navbar-nav align-items-lg-center gap-lg-2">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
         <li class="nav-item"><a class="nav-link active" href="service.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         <li class="nav-item ms-lg-3">
@@ -38,6 +39,7 @@
   </div>
 </nav>
 
+<div id="main-content"></div>
 <header class="vh-page-header">
   <div class="container" data-aos="fade-up">
     <p class="vh-eyebrow">Our Services</p>
@@ -80,30 +82,15 @@
         </p>
         <ul class="vh-checklist">
           <li><i class="bi bi-check2"></i>Independent Site Supervision & Quality Control</li>
-          <li><i class="bi bi-check2"></i> Property oversight & maintenance subcription (Borehole, water & power systems)</li>
+          <li><i class="bi bi-check2"></i> Property oversight & maintenance subscription (Borehole, water & power systems)</li>
           <li><i class="bi bi-check2"></i> Drone-Based site Documentation</li>
           <li><i class="bi bi-check2"></i> Snagging & Defects Inspection</li>
           <li><i class="bi bi-check2"></i>Construction Progress Reporting for lenders</li>
-          <li><i class="bi bi-check2"></i>Diaspoora property search & Acquisition Support</li>
-          <li><i class="bi bi-check2"></i>Virtual property tours (Live Video Walkthroughs) </li>
+          <li><i class="bi bi-check2"></i> Diaspora property search & acquisition support</li>
+          <li><i class="bi bi-check2"></i> Virtual property tours (live video walkthroughs)</li>
         </ul>
         <a href="contact.html" class="btn btn-vh-primary btn-lg mt-2">Request Home Watch</a>
       </div>
-      <!-- <div class="col-lg-6">
-        <div class="vh-report-card">
-          <div class="vh-report-card__header">
-            <span class="vh-report-tag">MAINTENANCE VISIT</span>
-            <span class="vh-report-date">28 Aug 2026</span>
-          </div>
-          <h3 class="vh-report-title">4-Bed Duplex, Awoyaya</h3>
-          <ul class="vh-report-list">
-            <li><span>Status</span><strong>Occupied — stable</strong></li>
-            <li><span>Roof / plumbing</span><strong>No issues found</strong></li>
-            <li><span>Evidence</span><strong>9 photos · 1 video</strong></li>
-          </ul>
-          <p class="vh-report-note">"Minor hairline crack noted on the boundary wall, east side — flagged for monitoring, not urgent."</p>
-        </div>
-      </div> -->
     </div>
   </div>
 </section>
@@ -189,7 +176,7 @@
     <img src="img/vergehold logo.png" alt="Vergehold" height="50">
     <ul class="nav">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
       <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
@@ -200,5 +187,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="index.js"></script>
+
+<!-- STICKY MOBILE CTA -->
+<a href="contact.html" id="stickyMobileCta" class="vh-sticky-cta">
+  <i class="bi bi-calendar-check" aria-hidden="true"></i> Request an Inspection
+</a>
 </body>
 </html>
