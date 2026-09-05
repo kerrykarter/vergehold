@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Vergehold</title>
+<meta name="description" content="Request an inspection or get in touch with Vergehold — property oversight for owners in Lagos.">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon/vergehold_favicon.svg">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<a href="#main-content" class="vh-skip-link">Skip to content</a>
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/vergehold logo.png" alt="Vergehold" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-vh-primary" href="#contactForm">Request an Inspection</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="main-content"></div>
+<header class="vh-page-header">
+  <div class="container" data-aos="fade-up">
+    <p class="vh-eyebrow">Get in Touch</p>
+    <h1 class="vh-display">Let's take a look at your property.</h1>
+    <p class="vh-lead mt-3">Tell us a bit about what you need watched, and we'll get back to you with next steps.</p>
+  </div>
+</header>
+
+<section class="vh-section">
+  <div class="container">
+    <div class="row g-5">
+      <!-- FORM -->
+      <div class="col-lg-7" data-aos="fade-up">
+        <form id="contactForm" class="vh-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="vh-label">Full name</label>
+              <input type="text" class="form-control vh-input" id="name" name="name" required>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="vh-label">Email address</label>
+              <input type="email" class="form-control vh-input" id="email" name="email" required>
+            </div>
+            <div class="col-md-6">
+              <label for="phone" class="vh-label">Phone / WhatsApp</label>
+              <input type="tel" class="form-control vh-input" id="phone" name="phone">
+            </div>
+            <div class="col-md-6">
+              <label for="service" class="vh-label">Service needed</label>
+              <select class="form-select vh-input" id="service" name="service">
+                <option value="Home Watch" selected>Home Watch (maintenance)</option>
+                <option value="Land Watch">Land Watch</option>
+                <option value="Build Watch">Build Watch</option>
+                <option value="Not sure">Not sure yet</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label for="location" class="vh-label">Property location</label>
+              <input type="text" class="form-control vh-input" id="location" name="location" placeholder="e.g. Awoyaya, Lagos">
+            </div>
+            <div class="col-12">
+              <label for="message" class="vh-label">Tell us more</label>
+              <textarea class="form-control vh-input" id="message" name="message" rows="5" placeholder="What would you like us to check on?"></textarea>
+            </div>
+          </div>
+          <input type="hidden" name="_subject" value="New Inspection Request - Vergehold">
+          <button type="submit" class="btn btn-vh-primary btn-lg mt-4" id="submitBtn">Send Request</button>
+          <div id="formStatus" class="mt-3" role="status" aria-live="polite"></div>
+          <p class="vh-form-note mt-3">Your request will be sent securely and we will respond within 1-2 business days.</p>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="vh-credential-card">
+          <i class="bi bi-envelope vh-credential-icon"></i>
+          <h3>Prefer email?</h3>
+          <p>Reach us directly and we'll respond as soon as we can.</p>
+          <a href="mailto:vergehold@polsia.app" class="vh-footer-email d-inline-block mt-3">vergehold@polsia.app</a>
+        </div>
+
+        <ul class="vh-lifecycle-list mt-4">
+          <li>
+            <i class="bi bi-clock"></i>
+            <div>
+              <strong>Response time</strong>
+              <span>We typically respond within 1–2 business days.</span>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <strong>Coverage area</strong>
+              <span>Serving property owners across Lagos, including the Ibeju-Lekki corridor.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="vh-footer">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+    <img src="img/vergehold logo.png" alt="Vergehold" height="32">
+    <ul class="nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+    <a href="mailto:vergehold@polsia.app" class="vh-footer-email">vergehold@polsia.app</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="index.js"></script>
+
+<a href="#contactForm" id="stickyMobileCta" class="vh-sticky-cta">
+  <i class="bi bi-calendar-check" aria-hidden="true"></i> Request an Inspection
+</a>
+</body>
+</html>

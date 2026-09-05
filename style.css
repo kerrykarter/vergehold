@@ -1,0 +1,495 @@
+:root {
+  --vh-charcoal: #1B222A;
+  --vh-forest: #1D5C3F;
+  --vh-forest-light: #2E7A54;
+  --vh-white: #FFFFFF;
+  --vh-off-white: #F7F7F5;
+  --vh-tint: #E7E5DF;
+
+  --bs-primary: var(--vh-forest);
+  --bs-body-font-family: 'Inter', sans-serif;
+  --bs-body-color: var(--vh-charcoal);
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--vh-charcoal);
+  background: var(--vh-white);
+}
+
+.vh-skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 2000;
+  padding: 0.6rem 0.9rem;
+  color: var(--vh-white);
+  background: var(--vh-charcoal);
+  text-decoration: none;
+}
+.vh-skip-link:focus {
+  top: 1rem;
+}
+
+h1, h2, h3, .vh-display {
+  font-family: 'Poppins', sans-serif;
+  color: var(--vh-charcoal);
+}
+
+/* NAV */
+#mainNav {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--vh-tint);
+  padding: 0.75rem 0;
+}
+.nav-link {
+  font-weight: 500;
+  color: var(--vh-charcoal);
+  margin: 0 0.5rem;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--vh-forest);
+}
+#mainNav.is-scrolled {
+  box-shadow: 0 2px 12px rgba(27, 34, 42, 0.06);
+}
+
+/* BUTTONS */
+.btn-vh-primary {
+  background: var(--vh-forest);
+  color: var(--vh-white);
+  border: 1px solid var(--vh-forest);
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  transition: background 0.2s ease;
+}
+.btn-vh-primary:hover {
+  background: var(--vh-forest-light);
+  color: var(--vh-white);
+}
+.btn-vh-outline {
+  background: transparent;
+  color: var(--vh-charcoal);
+  border: 1px solid var(--vh-charcoal);
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  transition: all 0.2s ease;
+}
+.btn-vh-outline:hover {
+  background: var(--vh-charcoal);
+  color: var(--vh-white);
+}
+
+/* HERO */
+.vh-hero {
+  padding: 9rem 0 5rem;
+  background: var(--vh-off-white);
+}
+.vh-hero--photo {
+  background-image: linear-gradient(120deg, rgba(247,247,245,0.82) 25%, rgba(247,247,245,0.58)),
+    url('img/elias-perdomo-X9-j4z1EIgU-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* VALUE PROP ICONS */
+.vh-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(29, 92, 63, 0.08);
+  color: var(--vh-forest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* SERVICE ICON */
+.vh-service-icon {
+  font-size: 1.8rem;
+  color: var(--vh-forest);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* TRUST IMAGE */
+.vh-trust-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+.vh-eyebrow {
+  color: var(--vh-forest);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
+}
+.vh-display {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.vh-lead {
+  font-size: 1.1rem;
+  color: #4A5158;
+  max-width: 52ch;
+  margin-top: 1.25rem;
+}
+
+/* SECTIONS */
+.vh-section {
+  padding: 5rem 0;
+}
+.vh-section--tint {
+  background: var(--vh-off-white);
+}
+.vh-h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.vh-value-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.vh-value-text {
+  color: #4A5158;
+  max-width: 42ch;
+}
+
+/* SERVICE CARDS */
+.vh-service-card {
+  background: var(--vh-white);
+  border: 1px solid var(--vh-tint);
+  border-radius: 6px;
+  padding: 2rem;
+  height: 100%;
+  transition: border-color 0.2s ease;
+}
+.vh-service-card:hover {
+  border-color: var(--vh-forest);
+}
+.vh-service-card--lead {
+  border-color: var(--vh-forest);
+  border-width: 2px;
+  position: relative;
+}
+.vh-service-card--lead .vh-badge {
+  margin-bottom: 0.75rem;
+}
+.vh-service-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+.vh-service-card p {
+  color: #4A5158;
+  margin: 0;
+}
+
+/* BADGE (Home Watch lead / Services primary focus) */
+.vh-badge {
+  display: inline-block;
+  background: rgba(29, 92, 63, 0.1);
+  color: var(--vh-forest);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.4rem 0.9rem;
+  border-radius: 30px;
+}
+
+/* LINK ARROW */
+.vh-link-arrow {
+  color: var(--vh-forest);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--vh-forest);
+  padding-bottom: 2px;
+}
+.vh-link-arrow:hover {
+  color: var(--vh-forest-light);
+  border-color: var(--vh-forest-light);
+}
+
+/* QUOTE */
+.vh-quote {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--vh-charcoal);
+  border-left: 3px solid var(--vh-forest);
+  padding-left: 1.5rem;
+}
+.vh-quote footer {
+  margin-top: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6B7280;
+}
+
+/* CTA */
+.vh-cta {
+  background: var(--vh-charcoal);
+  padding: 5rem 0;
+}
+.vh-cta .vh-h2 {
+  color: var(--vh-white);
+}
+
+/* FOOTER */
+.vh-footer {
+  background: var(--vh-off-white);
+  border-top: 1px solid var(--vh-tint);
+  padding: 2rem 0;
+}
+.vh-footer-email {
+  color: var(--vh-forest);
+  font-weight: 600;
+  text-decoration: none;
+}
+.vh-footer .nav-link {
+  color: #4A5158;
+  font-size: 0.95rem;
+}
+
+/* PAGE HEADER (About / Services) */
+.vh-page-header {
+  padding: 9rem 0 3rem;
+  background: var(--vh-off-white);
+  border-bottom: 1px solid var(--vh-tint);
+}
+
+.vh-body {
+  color: #4A5158;
+  margin-top: 1rem;
+}
+
+/* LIFECYCLE LIST (About) */
+.vh-lifecycle-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+.vh-lifecycle-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--vh-tint);
+}
+.vh-lifecycle-list li i {
+  font-size: 1.4rem;
+  color: var(--vh-forest);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+.vh-lifecycle-list li div {
+  display: flex;
+  flex-direction: column;
+}
+.vh-lifecycle-list li strong {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+}
+.vh-lifecycle-list li span {
+  color: #4A5158;
+  font-size: 0.95rem;
+}
+
+/* CREDENTIAL CARD (About) */
+.vh-credential-card {
+  background: var(--vh-charcoal);
+  color: var(--vh-off-white);
+  border-radius: 6px;
+  padding: 2.25rem;
+}
+.vh-credential-icon {
+  font-size: 2rem;
+  color: var(--vh-forest-light);
+  margin-bottom: 1rem;
+}
+.vh-credential-card h3 {
+  color: var(--vh-white);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+.vh-credential-card p {
+  color: #C7CBCF;
+  margin: 0;
+}
+
+/* STAT CARDS (About — why Lagos) */
+.vh-stat-card {
+  background: var(--vh-white);
+  border: 1px solid var(--vh-tint);
+  border-radius: 6px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: 100%;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.vh-stat-card i {
+  color: var(--vh-forest);
+  font-size: 1.3rem;
+}
+
+/* CHECKLIST (Services) */
+.vh-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+.vh-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  color: #333A40;
+}
+.vh-checklist li i {
+  color: var(--vh-forest);
+  font-weight: 700;
+}
+
+/* PROCESS STEPS (Services) */
+.vh-step {
+  padding: 1.5rem 0;
+  border-top: 2px solid var(--vh-tint);
+}
+.vh-step-num {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--vh-forest);
+  margin-bottom: 0.5rem;
+}
+.vh-step h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+.vh-step p {
+  color: #4A5158;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .vh-hero { padding: 7rem 0 3rem; }
+}
+
+/* CONTACT FORM */
+.vh-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+.vh-input {
+  border: 1px solid var(--vh-tint);
+  border-radius: 4px;
+  padding: 0.65rem 0.9rem;
+}
+.vh-input:focus {
+  border-color: var(--vh-forest);
+  box-shadow: 0 0 0 0.2rem rgba(29, 92, 63, 0.12);
+}
+.vh-form-note {
+  color: #6B7280;
+  font-size: 0.85rem;
+}
+.vh-form-success,
+.vh-form-error {
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+}
+.vh-form-success {
+  color: var(--vh-forest);
+  background: rgba(29, 92, 63, 0.08);
+}
+.vh-form-error {
+  color: #A6402F;
+  background: rgba(166, 64, 47, 0.08);
+}
+.vh-form-success i,
+.vh-form-error i {
+  margin-right: 0.35rem;
+}
+.vh-form-error a {
+  color: #A6402F;
+  text-decoration: underline;
+}
+
+/* MOBILE CONTACT CTA */
+.vh-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .vh-sticky-cta {
+    display: block;
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1030;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    background: var(--vh-forest);
+    color: var(--vh-white);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0.5rem 1.25rem rgba(27, 34, 42, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .vh-sticky-cta.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .vh-sticky-cta:hover {
+    background: var(--vh-forest-light);
+    color: var(--vh-white);
+  }
+}
+
+/* 404 PAGE */
+.vh-404 {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0 4rem;
+}
+.vh-404-icon {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--vh-forest);
+  font-size: 3rem;
+}
+.vh-404 .vh-lead {
+  max-width: 46ch;
+}
