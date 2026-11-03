@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Start the scroll-reveal animations after the page content is available.
-  AOS.init({
-    duration: 700,
-    once: true,
-    easing: 'ease-out-quart'
-  });
+  if (window.AOS) {
+    AOS.init({
+      duration: 700,
+      once: true,
+      easing: 'ease-out-quart'
+    });
+  }
 
   const nav = document.getElementById('mainNav');
   const collapseEl = document.getElementById('navMenu');

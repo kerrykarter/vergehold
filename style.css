@@ -91,8 +91,54 @@ h1, h2, h3, .vh-display {
 #mainNav .navbar-nav .nav-link.active::after {
   transform: scaleX(1);
 }
+#mainNav .navbar-toggler-icon {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--vh-charcoal);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-size 180ms ease;
+}
+#mainNav .navbar-toggler-icon::before,
+#mainNav .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: top 180ms ease, transform 180ms ease;
+}
+#mainNav .navbar-toggler-icon::before {
+  top: calc(50% - 6px);
+}
+#mainNav .navbar-toggler-icon::after {
+  top: calc(50% + 4px);
+}
+#mainNav .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-size: 0 2px;
+}
+#mainNav .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before,
+#mainNav .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  top: calc(50% - 1px);
+}
+#mainNav .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+}
+#mainNav .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+}
 @media (prefers-reduced-motion: reduce) {
   #mainNav .navbar-nav .nav-link::after {
+    transition: none;
+  }
+  #mainNav .navbar-toggler-icon,
+  #mainNav .navbar-toggler-icon::before,
+  #mainNav .navbar-toggler-icon::after {
     transition: none;
   }
 }
