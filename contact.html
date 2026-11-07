@@ -7,14 +7,13 @@
 <meta name="description" content="Request an inspection or get in touch with Vergehold — property oversight for owners in Lagos.">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon/vergehold_favicon.svg">
 <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body class="vh-contact-page">
 <a href="#main-content" class="vh-skip-link">Skip to content</a>
 
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
@@ -41,7 +40,7 @@
 
 <div id="main-content"></div>
 <header class="vh-page-header">
-  <div class="container" data-aos="fade-up">
+  <div class="container">
     <p class="vh-eyebrow">Get in Touch</p>
     <h1 class="vh-display">Let's take a look at your property.</h1>
     <p class="vh-lead mt-3">Tell us a bit about what you need watched, and we'll get back to you with next steps.</p>
@@ -52,9 +51,9 @@
   <div class="container">
     <div class="row g-5">
       <!-- FORM -->
-      <div class="col-lg-7" data-aos="fade-up">
+      <div class="col-lg-7 vh-contact-form-column">
         <form id="contactForm" class="vh-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="row g-3">
+          <div class="row g-4 vh-contact-fields">
             <div class="col-md-6">
               <label for="name" class="vh-label">Full name</label>
               <input type="text" class="form-control vh-input" id="name" name="name" required>
@@ -86,22 +85,23 @@
             </div>
           </div>
           <input type="hidden" name="_subject" value="New Inspection Request - Vergehold">
-          <button type="submit" class="btn btn-vh-primary btn-lg mt-4" id="submitBtn">Send Request</button>
+          <button type="submit" class="btn btn-vh-primary btn-lg mt-4 vh-contact-submit" id="submitBtn">Send Request</button>
+          <p class="vh-contact-privacy">Your information is only used to respond to your enquiry.</p>
           <div id="formStatus" class="mt-3" role="status" aria-live="polite"></div>
           <p class="vh-form-note mt-3">Your request will be sent securely and we will respond within 1-2 business days.</p>
         </form>
       </div>
 
       <!-- CONTACT INFO -->
-      <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
-        <div class="vh-credential-card">
+      <div class="col-lg-5 vh-contact-info">
+        <div class="vh-credential-card vh-contact-email-panel">
           <i class="bi bi-envelope vh-credential-icon"></i>
           <h3>Prefer email?</h3>
           <p>Reach us directly and we'll respond as soon as we can.</p>
           <a href="mailto:vergehold@polsia.app" class="vh-footer-email d-inline-block mt-3">vergehold@polsia.app</a>
         </div>
 
-        <ul class="vh-lifecycle-list mt-4">
+        <ul class="vh-lifecycle-list vh-contact-details mt-4">
           <li>
             <i class="bi bi-clock"></i>
             <div>
@@ -130,7 +130,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="index.js"></script>
 
 <a href="#contactForm" id="stickyMobileCta" class="vh-sticky-cta">
