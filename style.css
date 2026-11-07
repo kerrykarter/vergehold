@@ -577,20 +577,25 @@ h1, h2, h3, .vh-display {
 }
 
 @media (max-width: 991px) {
-  .vh-hero { padding: 7rem 0 3rem; }
-  .vh-about-hero-photo { height: 200px; }
+  .vh-hero {
+    padding: 7rem 0 3rem;
+  }
+
+  .vh-about-hero-photo {
+    height: 200px;
+  }
 }
 
 @media (max-width: 767px) {
-  .vh-about-hero-photo { height: 180px; }
-  .vh-credential-card, .vh-copy-width, .vh-body, .vh-lead { max-width: none; }
-  .vh-sticky-cta {
-    position: static;
-    margin: 1rem auto 0;
-    width: calc(100% - 2rem);
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
+  .vh-about-hero-photo {
+    height: 180px;
+  }
+
+  .vh-credential-card,
+  .vh-copy-width,
+  .vh-body,
+  .vh-lead {
+    max-width: none;
   }
 }
 
@@ -663,11 +668,13 @@ h1, h2, h3, .vh-display {
     transform: translateY(1rem);
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
+
   .vh-sticky-cta.is-visible {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
   }
+
   .vh-sticky-cta:hover {
     background: var(--vh-forest-light);
     color: var(--vh-white);
@@ -691,4 +698,3 @@ h1, h2, h3, .vh-display {
 .vh-404 .vh-lead {
   max-width: 46ch;
 }
-
