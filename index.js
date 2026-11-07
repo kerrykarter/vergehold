@@ -1,11 +1,37 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Start the scroll-reveal animations after the page content is available.
-  if (window.AOS) {
-    AOS.init({
-      duration: 700,
-      once: true,
-      easing: 'ease-out-quart'
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canRevealOnScroll = 'IntersectionObserver' in window;
+
+  if (!prefersReducedMotion && canRevealOnScroll) {
+    const heroElements = document.querySelectorAll(
+      '.vh-home-hero__content, .vh-home-hero__image, .vh-about-hero__image, .vh-about-hero__content, .vh-page-header > .container, .vh-404 > .container'
+    );
+    heroElements.forEach(function (element, index) {
+      element.classList.add('vh-motion-hero');
+      element.style.setProperty('--vh-motion-delay', index % 2 ? '80ms' : '0ms');
     });
+
+    const revealElements = document.querySelectorAll(
+      'main > section, body > .vh-section, body > .vh-cta, body > .vh-404'
+    );
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(function (element) {
+      element.classList.add('vh-motion-reveal');
+      revealObserver.observe(element);
+    });
+
+    document.body.classList.add('vh-motion-ready');
   }
 
   const nav = document.getElementById('mainNav');
