@@ -698,9 +698,6 @@ h1, h2, h3, .vh-display {
 .vh-404 .vh-lead {
   max-width: 46ch;
 }
-<<<<<<< HEAD
-=======
-
 /* HOMEPAGE */
 .vh-home {
   overflow-x: clip;
@@ -2468,4 +2465,3 @@ h1, h2, h3, .vh-display {
     transform: none;
   }
 }
->>>>>>> e6d3319551e07c4d6084bbcef58deffc4eda1522
